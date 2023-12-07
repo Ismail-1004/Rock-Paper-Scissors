@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+
+    font-family: sans-serif;
+
+    user-select: none;
+}
+
+body {
+    height: 100vh;
+    background: #001d3d;
+
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* root start */
+
+.win {
+    background: green;
+}
+
+.lose {
+    background: red;
+}
+
+.draw {
+    background: gray;
+}
+
+.btn {
+    border: 1px solid white;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: white;
+    background: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.active {
+  transform: translate(-50%, 0%) !important;  
+}
+
+.active__overlay {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.btn:hover {
+    border: 1px solid black;
+    background: #000;
+    color: white;
+}
+/* root end */
+/* ***************** */
+
+.table {
+    padding: 30px 0;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.table__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: rgba(0, 0, 0, 0.586);
+    backdrop-filter: blur(15px);
+    z-index: 99;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.table__instruction {
+    background: white;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    z-index: 999;
+
+    transition: .3s;
+}
+
+.table__instruction-head {
+    position: relative;
+}
+
+.table__instruction-close {
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+    transform: translateY(-50%);
+    font-size: 20px;
+
+    color: red;
+    cursor: pointer;
+}
+
+.table__instruction-title {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.table__instruction p {
+    margin: 10px 0;
+}
+
+.table__instruction h2 {
+    margin: 10px 0;
+}
+
+.table__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    height: 100%;
+}
+
+.table__content-scores {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 5px solid white;
+    padding: 20px 0;
+    width: 550px;
+
+    gap: 100px;
+
+    border-radius: 20px;
+}
+
+.table__content-score {
+    background: rgb(236, 236, 236);
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.table__content-score p {
+    font-size: 40px;
+}
+
+.table__content-score span {
+    color: white;
+
+    position: absolute;
+    /* left: -50%; */
+    top: 110%;
+    /* transform: translateX(-10%); */
+
+    background: white;
+    color: black;
+    
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.table__content-dots {
+    color: white;
+    font-size: 50px;
+}
+
+.table__content-game {
+    display: flex;
+    gap: 20px;
+
+    width: 100%;
+}
+
+.table__content-select {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
+    /* background: #1a1138; */
+
+    color: white;
+
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.table__content-item {
+    cursor: pointer;
+    padding: 20px 30px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.table__content-item:hover {
+    background: white;
+    color: black;
+}
+
+.table__content-instruction {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+}

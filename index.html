@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <section class="table">
+        <div class="table__overlay"></div>
+        <div class="table__instruction">
+            <div class="table__instruction-head">
+                <h1 class="table__instruction-title"> Камень, Ножницы, Бумага - Инструкция </h1>
+                <span class="table__instruction-close">X</span>
+            </div>
+            <hr>
+            <p>
+                Камень, ножницы, бумага — это простая логическая игра, которую часто используют для принятия решений или развлечения. Вот общее описание правил:
+                <br>
+                Игроки: Двое участников.
+            </p>
+            <h2>  Правила: </h2>
+            <ul>
+                <li>Камень (Rock): Изображает кулак.</li>
+                <li>Ножницы (Scissors): Изображают два поднятых пальца.</li>
+                <li>Бумага (Paper): Изображает раскрытую ладонь.</li>
+            </ul>
+            <h2> Правила определения победителя: </h2>
+            <ul>
+                <li>Камень побеждает ножницы (камень затупляет или ломает ножницы).</li>
+                <li>Ножницы побеждают бумагу (ножницы разрезают бумагу).</li>
+                <li> Бумага побеждает камень (бумага покрывает камень). </li>
+            </ul>
+            <h2> Игровой процесс: </h2>
+            <p>
+                Оба игрока одновременно выбирают один из трех элементов: камень, ножницы или бумагу.
+                После выбора обоих игроков определяется победитель в соответствии с правилами.
+                Игра может повторяться, либо игроки могут играть до достижения заранее установленного количества побед.
+                Игра предоставляет элемент случайности и стратегии, поскольку каждый игрок старается предугадать выбор противника.
+            </p>
+        </div>
+        <div class="table__light"></div>
+        <div class="table__content container">
+            <div class="table__content-scores">
+                <div class="table__content-score user__score">
+                    <p>0</p>
+                    <!-- <span> Пользователь </span> -->
+                </div>
+                <div>
+                    <div class="table__content-dots">
+                        :
+                    </div>
+                </div>
+                <div class="table__content-score bot__score">
+                    <p>0</p>
+                    <!-- <span> Компьютер </span> -->
+                </div>
+            </div>
+            <div class="table__content-game">
+                <div class="table__content-user table__content-select">
+                    <div class="table__content-item" id="0" data-symbol="s">Н</div>
+                    <div class="table__content-item" id="1" data-symbol="p">Б</div>
+                    <div class="table__content-item" id="2" data-symbol="w">К</div>
+                </div>
+                <div class="table__content-bot table__content-select">
+                    <div class="table__content-item" id="0" data-symbol="s">Н</div>
+                    <div class="table__content-item" id="1" data-symbol="p">Б</div>
+                    <div class="table__content-item" id="2" data-symbol="w">К</div>
+                </div>
+            </div>
+
+            <button class="table__content-btn btn"> Играть заново </button>
+            <button class="table__content-instruction btn"> Инструкция </button>
+        </div>
+    </section>
+    
+    <script src="app.js"></script>
+</body>
+</html>
